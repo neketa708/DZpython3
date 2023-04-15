@@ -5,7 +5,12 @@
 # 3
 #   -> 1
 N = int(input("колличество элементов в массиве "))
-X = int(input("число для нахождения "))
-a = [i for i in range(N)]
+NAi = input("Введите через пробел элементы списка: ").split()
+A = list(map(int, NAi))
 
-print(a.count(X)) 
+if len(A)!=N:
+    print("размер A не соответствует N")
+else:
+    X = int(input("число для нахождения "))
+
+print(A.count(X)) 

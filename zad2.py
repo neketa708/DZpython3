@@ -4,10 +4,17 @@
 #   1 2 3 4 5
 #   6
 #   -> 5
+
 N = int(input("колличество элементов в массиве "))
-A_entered = input("Введите через пробел элементы списка: ").split()
-X = int(input("число для нахождения "))
-A_num = list(map(int, A_entered))
+NAi = input("Введите через пробел элементы списка: ").split()
+A = list(map(int, NAi))
+
+if len(A)!=N:
+    print("размер A не соответствует N")
+else:
+    X = int(input("число для нахождения "))
+    print(min(A, key=lambda a:abs(a-X)))
+
 
 
     
